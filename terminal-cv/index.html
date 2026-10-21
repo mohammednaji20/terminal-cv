@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mohammed Naji — Interactive CV Terminal</title>
+  <meta name="description" content="Interactive terminal-style CV of Mohammed Naji (Abu Ibrahim) — IT, Front-End Development & Cybersecurity, Gaza, Palestine." />
+  <meta property="og:title" content="Mohammed Naji — Interactive CV Terminal" />
+  <meta property="og:description" content="Type `help` and explore my CV like a real terminal. IT · Front-End · Cybersecurity." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🖥️</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;800&family=Noto+Kufi+Arabic:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="crt" aria-hidden="true"></div>
+
+  <main class="terminal" dir="ltr">
+    <header class="term-header">
+      <div class="dots">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+      </div>
+      <div class="term-title">visitor@mohammednaji: ~/cv</div>
+      <button id="lang-toggle" class="lang-btn" type="button" title="Switch language / تغيير اللغة">عربي</button>
+    </header>
+
+    <div class="statusbar">
+      <span id="loc-label">Gaza, PS</span>
+      <span class="status-mid">interactive_cv — zsh</span>
+      <span id="clock">--:--:--</span>
+    </div>
+
+    <div id="scroll-area" class="scroll-area">
+      <div id="output" class="output" aria-live="polite"></div>
+
+      <div class="input-line" dir="ltr">
+        <label class="prompt" for="cmd">
+          <span class="p-user">visitor</span><span class="p-at">@</span><span class="p-host">mohammednaji</span><span class="p-path">:~$</span>
+        </label>
+        <input id="cmd" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" autofocus
+               aria-label="terminal command input" />
+      </div>
+
+      <div id="chips" class="chips" dir="ltr"></div>
+    </div>
+  </main>
+
+  <footer class="page-footer" dir="ltr">
+    <span>built with 💚 in Gaza, Palestine</span>
+    <span class="sep">·</span>
+    <a href="https://github.com/mohammednaji20" target="_blank" rel="noopener">GitHub</a>
+    <span class="sep">·</span>
+    <a href="https://www.linkedin.com/in/mohammedabuibrahim" target="_blank" rel="noopener">LinkedIn</a>
+    <span class="sep">·</span>
+    <a href="https://mohammednaji20.github.io/-Abu-ibrahim/" target="_blank" rel="noopener">Portfolio</a>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="terminal.js"></script>
+</body>
+</html>
